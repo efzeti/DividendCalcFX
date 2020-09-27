@@ -5,26 +5,30 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int month = 8;
-        int year = 2020;
+        int month = 8;                      // TODAYS DATE
+        int year = 2020;                    // TODAYS DATE
 
-        double stockPrice = 48.72;
-        double dividend = 0.41;
+        double stockPrice = 48.72;          // CURRENT STOCK PRICE
+        double dividend = 0.41;             // CURRENT DIVIDEND
 
         double stockDiff;
         double dividendDiff;
 
-        double investments = 180.00;
+        double investments = 180.00;        // THIS IS HOW MUCH $ YOU WANT TO INVEST INTO STOCK MONTHLY
         double balance = investments;
-        int stockCount = 0;
+        int stockCount = 0;                 // THIS IS HOW MUCH STOCKS YOU HAVE AT THE BEGINNING
         int newStock;
 
         boolean diffs = false;
 
+        int period = 503;                   // THIS IS HOW MANY MONTHS YOU WANT TO INVEST
+        int dividendPeriod = 3;             // THIS IS HOW OFTEN THE COMPANY PAYS DIVIDENDS (3 - QUARTERLY, 6 - HALF YEAR, 12 - YEARLY)
 
-        for(int i = 0; i<504; i++){
 
-            if (month % 3 == 0){
+
+        for(int i = 0; i<period; i++){
+
+            if (month % dividendPeriod == 0){
                 balance = balance + stockCount * dividend;
             }
 
