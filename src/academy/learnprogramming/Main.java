@@ -1,25 +1,27 @@
 package academy.learnprogramming;
 
+import java.util.Calendar;
+
 public class Main {
 
     public static void main(String[] args) {
 
 
-        int month = 8;                      // TODAYS DATE
-        int year = 2020;                    // TODAYS DATE
+        int month = 1 + Calendar.getInstance().get(Calendar.MONTH); // TODAYS DATE
+        int year = Calendar.getInstance().get(Calendar.YEAR);       // TODAYS DATE
 
-        double stockPrice = 48.72;          // CURRENT STOCK PRICE
+        double stockPrice = 49.33;          // CURRENT STOCK PRICE
         double dividend = 0.41;             // CURRENT DIVIDEND
 
-        double stockDiff;
-        double dividendDiff;
+        double stockDiff = 1;
+        double dividendDiff = 1;
 
-        double investments = 180.00;        // THIS IS HOW MUCH $ YOU WANT TO INVEST INTO STOCK MONTHLY
+        double investments = 100.00;        // THIS IS HOW MUCH $ YOU WANT TO INVEST INTO STOCK MONTHLY
         double balance = investments;
         int stockCount = 0;                 // THIS IS HOW MUCH STOCKS YOU HAVE AT THE BEGINNING
         int newStock;
 
-        boolean diffs = false;
+        boolean diffs = false;              // CHANGE TO TRUE FOR SOME SMALL CHANGES IN DIVIDENDS AND STOCK PRICES
 
         int period = 503;                   // THIS IS HOW MANY MONTHS YOU WANT TO INVEST
         int dividendPeriod = 3;             // THIS IS HOW OFTEN THE COMPANY PAYS DIVIDENDS (3 - QUARTERLY, 6 - HALF YEAR, 12 - YEARLY)
@@ -54,8 +56,10 @@ public class Main {
 
             balance = balance + investments;
 
-            dividendDiff = ((Math.random() - 0.50) / 10.00) + 1;
-            stockDiff = ((Math.random() - 0.50) / 10.00) + 1;
+
+                dividendDiff = ((Math.random() - 0.50) / 100.00) + 1;
+                stockDiff = ((Math.random() - 0.50) / 100.00) + 1;
+
 
             if (diffs){
                 stockPrice = stockPrice*stockDiff;
