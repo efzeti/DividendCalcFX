@@ -1,5 +1,3 @@
-package academy.learnprogramming;
-
 import java.util.Calendar;
 
 public class Main {
@@ -13,8 +11,8 @@ public class Main {
         double stockPrice = 49.33;          // CURRENT STOCK PRICE
         double dividend = 0.41;             // CURRENT DIVIDEND
 
-        double stockDiff = 1;
-        double dividendDiff = 1;
+        double stockDiff ;
+        double dividendDiff;
 
         double investments = 100.00;        // THIS IS HOW MUCH $ YOU WANT TO INVEST INTO STOCK MONTHLY
         double balance = investments;

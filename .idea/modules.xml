@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CocaColaCalc.iml" filepath="$PROJECT_DIR$/CocaColaCalc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DividendCalcFX.iml" filepath="$PROJECT_DIR$/DividendCalcFX.iml" />
     </modules>
   </component>
 </project>
