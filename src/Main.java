@@ -19,7 +19,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        DividendCalculatorMachine.getInstance().calculate(49.33,0.41,100.00,0);
+        DividendCalculatorMachine.getInstance().calculate(49.33,0.41,100.00,0, LocalDate.of(2062,11,1));
         launch(args);
 
     }
