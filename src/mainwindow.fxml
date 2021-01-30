@@ -3,10 +3,39 @@
 
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <GridPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="MainWindowController"
-            prefHeight="400.0" prefWidth="600.0"
-            vgap="20" hgap="20">
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="MainWindowController"
+          vgap="10" hgap="10"
+          alignment="CENTER">
+
+
+<!--    prefHeight="400.0" prefWidth="600.0"-->
+    <padding>
+        <Insets bottom="10" left="10" right ="10" top="10"/>
+    </padding>
+    <Label text="Stock price:" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <TextField fx:id="stockPrice" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="Quarterly dividend:" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <TextField fx:id="quarterlyDividend" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="Monthly investments:" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <TextField fx:id="monthlyInvestments" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="Initial stock amount:" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <TextField fx:id="initialStockAmount" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="Stop investing @:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <DatePicker fx:id="deadLine" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Button text="Clear" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.halignment="CENTER" maxWidth="Infinity"/>
+    <Button text="Calculate" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" maxWidth="Infinity"/>
+
+    <TextField fx:id="finalStatus" editable="false" text="11.2062 Stocks: 2198 Dividend: 901.18$ New Stocks: 2" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+
 
 </GridPane>
