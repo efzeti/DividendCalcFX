@@ -18,14 +18,8 @@ public class DividendCalculatorMachine {
 
         int month = 1 + Calendar.getInstance().get(Calendar.MONTH); // TODAYS DATE
         int year = Calendar.getInstance().get(Calendar.YEAR);       // TODAYS DATE
-
-//        double stockPrice = 49.33;          // CURRENT STOCK PRICE
-//        double dividend = 0.41;             // CURRENT DIVIDEND
-
-
-//        double investments = 100.00;        // THIS IS HOW MUCH $ YOU WANT TO INVEST INTO STOCK MONTHLY
+        
         double balance = investments;
-//        int stockCount = 0;                 // THIS IS HOW MUCH STOCKS YOU HAVE AT THE BEGINNING
         int newStock;
 
         int endYear = date.getYear();
