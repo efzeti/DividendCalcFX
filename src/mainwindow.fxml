@@ -18,29 +18,36 @@
           alignment="CENTER" >
 
     <columnConstraints>
-        <ColumnConstraints minWidth="50.0" percentWidth="50.0" prefWidth="240.0" />
-        <ColumnConstraints minWidth="50.0" percentWidth="50.0" prefWidth="240.0" />
+        <ColumnConstraints minWidth="120.0"  prefWidth="150.0" />
+        <ColumnConstraints minWidth="120.0"  prefWidth="150.0" />
+        <ColumnConstraints minWidth="16.0"  prefWidth="24.0" />
+
     </columnConstraints>
-    
+
     <padding>
-        <Insets bottom="10" left="10" right ="10" top="10"/>
+        <Insets bottom="20" left="20" right ="20" top="20"/>
     </padding>
 
     <Label text="Stock price:" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <TextField fx:id="stockPrice" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="[$]" GridPane.rowIndex="0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <Label text="Quarterly dividend:" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="[$]" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <TextField fx:id="quarterlyDividend" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="[$]" GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <Label text="Monthly investments:" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <TextField fx:id="monthlyInvestments" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
+    <Label text="[-]" GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <Label text="Initial stock amount:" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <TextField fx:id="initialStockAmount" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
     <Label text="Stop investing @:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
     <DatePicker fx:id="deadLine" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <Label text="date" GridPane.rowIndex="4" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER"/>
 
     <Button text="Clear" onAction="#clearFields" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.halignment="CENTER" maxWidth="Infinity"/>
-    <Button text="Calculate" onAction="#calculateResult" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" maxWidth="Infinity"/>
+    <Button text="Calculate" onAction="#calculateResult" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" maxWidth="Infinity"/>
 
-    <TextField fx:id="finalStatus" editable="false" text="This is where your result will appear" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+    <TextField fx:id="finalStatus" editable="false" text="This is where your result will appear" GridPane.rowIndex="6" GridPane.columnSpan="3"/>
 
 
 

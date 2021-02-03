@@ -35,11 +35,28 @@ public class MainWindowController {
     }
 
     public void calculateResult(ActionEvent event) {
-        double stockPrc = Double.parseDouble(stockPrice.getText());
-        double quarterlyDvd = Double.parseDouble(quarterlyDividend.getText());
-        double monthlyInv = Double.parseDouble(monthlyInvestments.getText());
-        int initialStkAmt = Integer.parseInt(initialStockAmount.getText());
 
-        finalStatus.setText(DividendCalculatorMachine.getInstance().calculate(stockPrc, quarterlyDvd, monthlyInv, initialStkAmt, deadLine.getValue()));
+        try {
+
+            double stockPrc = Double.parseDouble(stockPrice.getText());
+            double quarterlyDvd = Double.parseDouble(quarterlyDividend.getText());
+            double monthlyInv = Double.parseDouble(monthlyInvestments.getText());
+            double initialStkAmt = Double.parseDouble(initialStockAmount.getText());
+
+            if (initialStkAmt % 1 != 0){
+                initialStockAmount.setText(String.format("%d", (int) initialStkAmt));
+            }
+
+
+            finalStatus.setText(DividendCalculatorMachine.getInstance().calculate(stockPrc, quarterlyDvd, monthlyInv, (int) initialStkAmt, deadLine.getValue()));
+
+        } catch (NumberFormatException e){
+
+            System.out.println("Wrong input");
+
+            finalStatus.setText("Wrong input");
+        }
+
+
     }
 }
